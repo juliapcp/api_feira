@@ -42,7 +42,7 @@ class UsuariosController {
             return res.status(400).json({ msg: "Email ou senha incorretos."});
         }
         const meuJwt = jwt.sign(usuarioEcontrado.dataValues, "SECRET%$#")
-        return res.json(meuJwt);
+        return res.json({token: meuJwt});
     }
 }
 
